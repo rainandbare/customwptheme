@@ -22,7 +22,9 @@ function theme_setup() {
 	* You can allow clients to create multiple menus by
   * adding additional menus to the array. */
 	register_nav_menus( array(
-		'primary' => 'Primary Navigation'
+		'primary' => 'Primary Navigation',
+		'footer' => 'Footer Menu',
+		'social' => 'Social Menu'
 	) );
 
 	/*
@@ -46,6 +48,8 @@ function hackeryou_styles(){
 	wp_enqueue_style('style', get_stylesheet_uri() );
 
 	wp_enqueue_style('fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
+
+	wp_enqueue_style( 'googlefonts', 'https://fonts.googleapis.com/css?family=Dosis|Open+Sans+Condensed:300');
 }
 
 add_action( 'wp_enqueue_scripts', 'hackeryou_styles');
@@ -73,13 +77,22 @@ function hackeryou_scripts() {
     true //load in footer
   );
 
-  wp_enqueue_script(
-    'scripts', //handle
-    get_template_directory_uri() . '/js/main.min.js', //source
-    array( 'jquery', 'plugins' ), //dependencies
+	wp_enqueue_script(
+    'instafeed', //handle
+    get_template_directory_uri() . '/js/instafeed.min.js', //source
     null, // version number
     true //load in footer
   );
+
+  wp_enqueue_script(
+    'scripts', //handle
+    get_template_directory_uri() . '/js/main.min.js', //source
+    array( 'jquery', 'plugins', 'instafeed' ), //dependencies
+    null, // version number
+    true //load in footer
+  );
+
+   
 }
 
 add_action( 'wp_enqueue_scripts', 'hackeryou_scripts');
@@ -172,8 +185,24 @@ function hackeryou_widgets_init() {
 		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
 		'after_widget' => '</li>',
 		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
+		'after_title' => '</h3>'
 	) );
+
+	register_sidebar( array(
+		'name' => 'Footer Widget Area',
+		'id' => 'footer-widget-area',
+		'before_widget' => '<li class="footer-widget">',
+		'after_widget' => '</li>'
+		) );
+
+	register_sidebar( array(
+		'name' => 'Insta Widget Area',
+		'id' => 'insta-widget-area',
+		'before_widget' => '<div class="insta-widget">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3 class="insta-widget-title">',
+		'after_title' => '</h3>'
+		) );
 
 }
 
@@ -275,4 +304,26 @@ function get_post_parent($post) {
 	else {
 		return $post->ID;
 	}
+}
+
+// allow svg uploads
+add_filter('upload_mimes', 'custom_upload_mimes');
+
+function custom_upload_mimes ( $existing_mimes=array() ) {
+
+	// add the file extension to the array
+
+	$existing_mimes['svg'] = 'mime/type';
+
+        // call the modified list of extensions
+
+	return $existing_mimes;
+
+}
+
+//get Feature post url
+function hackeryou_get_thumbnail_url($post) {
+    $imageID = get_post_thumbnail_id($post->ID);
+    $imageURL = wp_get_attachment_url($imageID);
+    return $imageURL;
 }

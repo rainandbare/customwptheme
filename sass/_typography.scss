@@ -1,8 +1,28 @@
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.6rem;
+	font-family: 'Open Sans Condensed', sans-serif;
+
+}
+
+p {
+	font-family: 'Dosis',  sans-serif;
+}
+
+h1 {
+	padding: 0;
+	margin: 0;
+}
+
+
 a {
-	color: #BA209B;
+	color: $light;
 	text-decoration: none;
 	&:hover {
-		color: #D424B1;
+		color: $pop1;
 	}
 }
 

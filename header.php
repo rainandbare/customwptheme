@@ -15,16 +15,22 @@
 
 <header>
   <div class="container">
-    <h1>
+    
       <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
-        <?php bloginfo( 'name' ); ?>
+        <div class="logo">
+          <img src="<?php site_icon_url(); ?>" alt="">
+        </div>
       </a>
-    </h1>
-
-    <?php wp_nav_menu( array(
-      'container' => false,
-      'theme_location' => 'primary'
-    )); ?>
+    <ul class="collapseNav">
+      <li class="hamburger show"><i class="fa fa-bars"></i></li>
+      <li class="mainMenu">
+          <div class="ex"><i class="fa fa-times"></i></div>
+          <?php wp_nav_menu( array(
+            'container' => false,
+            'theme_location' => 'primary'
+          )); ?>
+      </li>
+    </ul>
   </div> <!-- /.container -->
 </header><!--/.header-->
 

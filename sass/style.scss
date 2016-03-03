@@ -6,6 +6,18 @@
 * Author: HackerYou
 * Author URI: http://hackeryou.com
 */
+/*
+====================================
+Variables
+====================================
+*/
+
+$transparent: RGBA(0,0,0,0.7);
+$dark: RGBA(24, 21, 15, 1);
+$medium: RGBA(76, 84, 84, 1);
+$light: RGBA(255, 255, 255, 1);
+$pop1: RGBA(227, 194, 255, 1);
+$pop2: RGBA(253, 250, 0, 1);
 
 @import 'normalize';
 @import 'typography';
@@ -13,11 +25,20 @@
 @import 'sidebar';
 @import 'comments';
 @import 'footer';
+@import 'frontpage';
+
 /*
+
 ====================================
 Default Styling
 ====================================
 */
+
+ul, li, h1, h2, h3, h4, h5, h6, p {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
 
 img {
 	max-width: 100%;
@@ -33,14 +54,14 @@ body {
 }
 
 .content {
-	float: left;
-	width: 65%;
+	width: 100%;
 	margin-right: 5%;
 }
 
 .full {
 	width: 100%;
 }
+
 
 
 
