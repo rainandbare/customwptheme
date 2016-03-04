@@ -9,6 +9,7 @@ get_header();  ?>
 <div class="main">
   <div class="hero">
     <div class="hero-overlay">
+      <h1><?php bloginfo('name'); ?></h1>
       <h2><?php bloginfo('description'); ?></h2>
     </div>
 	</div>

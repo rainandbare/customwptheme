@@ -18,6 +18,9 @@ $medium: RGBA(76, 84, 84, 1);
 $light: RGBA(255, 255, 255, 1);
 $pop1: RGBA(227, 194, 255, 1);
 $pop2: RGBA(253, 250, 0, 1);
+$title: 'Open Sans Condensed', sans-serif;
+$paragraph: 'Dosis',  sans-serif;
+
 
 @import 'normalize';
 @import 'typography';
@@ -26,6 +29,7 @@ $pop2: RGBA(253, 250, 0, 1);
 @import 'comments';
 @import 'footer';
 @import 'frontpage';
+@import 'blog';
 
 /*
 
@@ -42,6 +46,7 @@ ul, li, h1, h2, h3, h4, h5, h6, p {
 
 img {
 	max-width: 100%;
+	display: block;
 }
 
 body {

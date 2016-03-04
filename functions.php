@@ -49,7 +49,7 @@ function hackeryou_styles(){
 
 	wp_enqueue_style('fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
 
-	wp_enqueue_style( 'googlefonts', 'https://fonts.googleapis.com/css?family=Dosis|Open+Sans+Condensed:300');
+	wp_enqueue_style( 'googlefonts', 'https://fonts.googleapis.com/css?family=Dosis:200|Open+Sans+Condensed:300');
 }
 
 add_action( 'wp_enqueue_scripts', 'hackeryou_styles');
@@ -139,7 +139,7 @@ add_filter( 'wp_page_menu_args', 'hackeryou_page_menu_args' );
  * Sets the post excerpt length to 40 characters.
  */
 function hackeryou_excerpt_length( $length ) {
-	return 40;
+	return 35;
 }
 add_filter( 'excerpt_length', 'hackeryou_excerpt_length' );
 
@@ -192,7 +192,9 @@ function hackeryou_widgets_init() {
 		'name' => 'Footer Widget Area',
 		'id' => 'footer-widget-area',
 		'before_widget' => '<li class="footer-widget">',
-		'after_widget' => '</li>'
+		'after_widget' => '</li>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>'
 		) );
 
 	register_sidebar( array(

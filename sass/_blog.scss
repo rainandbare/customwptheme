@@ -1,0 +1,43 @@
+
+
+
+.posts {
+	display: flex;
+	flex-direction: column;
+	padding: 40px;
+	a {
+		color: $dark;
+		width: 35%;
+	}
+}
+
+.wholePost {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+	width: 50%;
+}
+.postInfo {
+	width: 65%;
+	text-align: right;
+	padding-right: 20px;
+	border-right: 1px solid $dark;
+}
+.postImage {
+	width: 100%;	
+}
+.wholePost:nth-of-type(2n){
+	float: right;
+	align-self: flex-end;
+	width: 50.1%;
+	.postInfo {
+		order: -1;
+		text-align: left;
+		padding-left: 21px;
+		border-left: 1px solid $dark;
+		padding-right: 0px;
+		border-right: none;
+	}
+
+}
+

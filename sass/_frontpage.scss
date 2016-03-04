@@ -3,19 +3,19 @@
 	background-size: cover;
 	background-position: center;
 	min-height: calc(100vh - 82px);
-
+	
+	color: $light;
+	text-align: center;
 }
 
-// .hero-overlay {
-// 	position: absolute;
-// 	top: 0;
-// 	bottom: 0;
-// 	left: 0;
-// 	right: 0;
-// 	background: $transparent;
-// 	display: flex;
-// 	justify-content: center;
-// 	align-items: center;
-// 	color: $light;
+.hero-overlay {
+	background: $transparent;
+	min-height: calc(100vh - 82px);
+	display: flex;
+	flex-direction:column;
+	justify-content: center;
+	
+}
 
-// }
+
+
