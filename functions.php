@@ -329,3 +329,16 @@ function hackeryou_get_thumbnail_url($post) {
     $imageURL = wp_get_attachment_url($imageID);
     return $imageURL;
 }
+
+function sm_get_title() {
+	$str = wpautop( get_the_content() );
+	$str = substr( $str, 0, strpos( $str, '</p>' ) + 4 );
+	$str = strip_tags($str, '<a><strong><em>');
+    return '<h2>' . $str . '</h2>';
+}
+
+function sm_get_content(){
+    $str = wpautop( get_the_content() );
+    $str = substr( $str, (strpos( $str, '</p>')));
+    return $str;
+}

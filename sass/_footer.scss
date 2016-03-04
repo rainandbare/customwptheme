@@ -46,7 +46,7 @@ ul.footer-top {
 
 
 
-.wpcf7-form-control-wrap input, input[type=submit]{
+.wpcf7-form-control-wrap input, input[type=submit], textarea{
 	background: transparent;
 	border: 1px solid $light;
 	padding: 10px;
@@ -58,7 +58,7 @@ ul.footer-top {
 	}
 
 }
-input[type=submit]{
+input[type=submit], textarea{
 
 	&:hover {
 		background: #E3C2FF;

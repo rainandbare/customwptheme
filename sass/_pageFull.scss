@@ -1,0 +1,44 @@
+
+.heroPageFull {
+	margin: 60px 0px 0px;
+	background-size: cover;
+	background-position: center 30%;
+	min-height: 30vh;
+	position: relative;
+}
+
+.heroPageFullOverlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: $transparent;
+
+}
+
+
+.pageFull {
+	padding: 40px 60px 150px;
+	h2 {
+		padding-bottom: 40px;
+		font-size: 3rem;
+	}
+}
+
+main.content {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	> *{
+		width: 30%;
+	}
+}
+
+main.content p:first-child {
+	display: none;
+}
+
+.frontPage main.content blockquote p {
+	display: block;
+}

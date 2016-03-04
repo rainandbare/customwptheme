@@ -7,6 +7,11 @@
 get_header();  ?>
 
 <div class="main">
+
+<div class="heroPageFull" style="background-image: url(<?php echo hackeryou_get_thumbnail_url($page); ?>);"> 
+	<div class="heroPageFullOverlay"></div> 	
+</div>
+
   <div class="container">
 	  <div class="posts">
 	    <?php // Start the loop ?>

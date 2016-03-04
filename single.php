@@ -2,15 +2,14 @@
 
 <div class="main">
   <div class="container">
+    <div class="posts">
     <div class="content">
       <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
         <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
           <h1 class="entry-title"><?php the_title(); ?></h1>
 
-          <div class="entry-meta">
-            <?php hackeryou_posted_on(); ?>
-          </div><!-- .entry-meta -->
+          
 
           <div class="entry-content">
             <?php the_content(); ?>
@@ -19,10 +18,9 @@
               'after' => '</div>'
             )); ?>
           </div><!-- .entry-content -->
-
           <div class="entry-utility">
-            <?php hackeryou_posted_in(); ?>
-            <?php edit_post_link( 'Edit', '<span class="edit-link">', '</span>' ); ?>
+                <p><?php the_date(); ?> - <?php echo get_the_category_list( '/' ) ?> - by <?php the_author(); ?>
+                </p>
           </div><!-- .entry-utility -->
         </div><!-- #post-## -->
 
@@ -34,6 +32,14 @@
         <?php comments_template( '', true ); ?>
 
       <?php endwhile; // end of the loop. ?>
+    </div>
+
+         <div class="entry-meta">
+            <?php hackeryou_posted_on(); ?>
+          </div><!-- .entry-meta -->
+<?php hackeryou_posted_in(); ?>
+            <?php edit_post_link( 'Edit', '<span class="edit-link">', '</span>' ); ?> 
+
 
     </div> <!-- /.content -->
 

@@ -2,8 +2,7 @@
 	background-image: url("https://images.unsplash.com/photo-1453282716202-de94e528067c?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=ac9b38e57a8a0724058cdcbe6a687aa8");
 	background-size: cover;
 	background-position: center;
-	min-height: calc(100vh - 82px);
-	
+	min-height: calc(100vh - 182px);
 	color: $light;
 	text-align: center;
 }
@@ -14,8 +13,31 @@
 	display: flex;
 	flex-direction:column;
 	justify-content: center;
-	
 }
 
+.frontPage {
+	padding: 100px 60px 150px;
+	h2 {
+		padding-bottom: 40px;
+		font-size: 3rem;
+	}
+}
+
+main.content {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	> *{
+		width: 30%;
+	}
+}
+
+main.content p:first-child {
+	display: none;
+}
+
+.frontPage main.content blockquote p {
+	display: block;
+}
 
 
