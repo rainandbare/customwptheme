@@ -20,9 +20,7 @@ get_header();  ?>
     	<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
       <?php echo sm_get_title(); ?>
-     <!--  <main class="content"><?php echo sm_get_content(); ?></main> -->
-
-     	<?php the_content(); ?>
+   <main class="content"><?php echo sm_get_content(); ?></main>   
     	<?php endwhile; // end the loop?>
     </div>
   </div> <!-- /.container -->

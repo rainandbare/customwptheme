@@ -6,6 +6,11 @@ ul.collapseNav li.hamburger.hide {
 	display: none;
 }
 
+.noscroll {
+	overflow: hidden;
+	height: 100vh;
+}
+
 .logo {
     width: 40px;
     padding: 5px 0px;
@@ -31,10 +36,10 @@ ul.collapseNav {
 		flex-direction: row;
 		align-items: center;
 		justify-content: center; 
-		top: 32px;
-		bottom: 0;
+		top: 0px;
 		left: 0;
-		right: 0;	
+		right: 0;
+		height: 100vh;	
 		background: $transparent;
 		font-size: 48px;
 		z-index: 2;
@@ -56,10 +61,26 @@ ul.collapseNav {
 }
 
 header {
-	background: rgba(0,0,0,0.7);
+	background: transparent;
+	position: relative;
+	z-index: 40;
+	margin-bottom: -50px;
 }
 
+main {
+	padding-top: 50px;
+}
 
+header.scrolled,
+.hero {
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+header.scrolled {
+	background: $transparent;
+}
 
 
 header .container {

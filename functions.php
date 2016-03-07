@@ -339,6 +339,21 @@ function sm_get_title() {
 
 function sm_get_content(){
     $str = wpautop( get_the_content() );
-    $str = substr( $str, (strpos( $str, '</p>')));
+    $str = substr( $str, strpos( $str, '</p>'), strpos( $str, '[c' ) - 19 );
     return $str;
 }
+
+function sm_get_form(){
+	$str = wpautop( get_the_content() );
+	$str = substr($str, strpos( $str, '[c' ) - 4 );
+	$str = strip_tags($str, '<p>');
+	return '<form>' . $str . '</form>';
+}
+
+
+
+
+
+
+
+

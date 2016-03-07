@@ -1,4 +1,4 @@
-<footer>
+<footer style="background-image: url(<?php echo hackeryou_get_thumbnail_url($page); ?>);">
 <footer class="overlay">
   <div id="instafeed"><?php  dynamic_sidebar( 'insta-widget-area' ); ?></div>
   <div class="container">

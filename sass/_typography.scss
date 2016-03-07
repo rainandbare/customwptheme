@@ -17,9 +17,13 @@ h1 {
 	color: $pop2;
 	text-transform: uppercase;
 }
-h2{
-	font-size: 5rem;
-}
+h2 {
+		font-size: 3rem;
+		padding-bottom: 5px;
+		text-transform: uppercase;
+		border-bottom: 1px solid $dark;
+		margin-bottom: 40px;
+	}
 
 
 a {
@@ -39,9 +43,10 @@ p {
 /*blockquotes*/
 
 blockquote {
-	background: #F7F7F7;
+	background: $light;
 	margin: 0;
 	padding: 20px;
+	font-size: 2.5rem;
 	p {
 		margin-top: 0;
 	}

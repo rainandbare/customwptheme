@@ -1,6 +1,5 @@
 
 .heroPageFull {
-	margin: 60px 0px 0px;
 	background-size: cover;
 	background-position: center 30%;
 	min-height: 30vh;
@@ -21,8 +20,11 @@
 .pageFull {
 	padding: 40px 60px 150px;
 	h2 {
-		padding-bottom: 40px;
 		font-size: 3rem;
+		padding-bottom: 5px;
+		text-transform: uppercase;
+		border-bottom: 1px solid $dark;
+		margin-bottom: 40px;
 	}
 }
 

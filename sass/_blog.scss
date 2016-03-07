@@ -1,6 +1,4 @@
 
-
-
 .posts {
 	display: flex;
 	flex-direction: column;
@@ -16,12 +14,25 @@
 	flex-direction: row;
 	align-items: flex-end;
 	width: 50%;
+	h2{
+	border-bottom: none;
+	}
 }
 .postInfo {
 	width: 65%;
 	text-align: right;
 	padding-right: 20px;
 	border-right: 1px solid $dark;
+	p a:nth-of-type(2){
+		color: $medium;
+		background: $pop1;
+		padding: 5px;
+		border-radius: 5px;
+		display: block;
+		width: 100%;
+		border-top-left-radius: 0px;
+		border-bottom-left-radius: 0px; 
+	}
 }
 .postImage {
 	width: 100%;	
@@ -37,13 +48,24 @@
 		border-left: 1px solid $dark;
 		padding-right: 0px;
 		border-right: none;
+		p a:nth-of-type(2){
+			border-top-right-radius: 0px;
+			border-bottom-right-radius: 0px; 
+			border-top-left-radius: 5px;
+			border-bottom-left-radius: 5px; 
+	}
 	}
 
 }
-.posts h2{
-	font-size: 3rem;
-}
 
+
+
+
+
+h2.blogTitle {
+	margin-bottom: 40px;
+	font-size: 6rem;
+}
 
 //Single post
 .posts h1 {
@@ -82,16 +104,60 @@
 	flex-direction: row;
 	justify-content: center;
 	align-content: center;
+	margin: 40px 0px;
+	border-bottom: solid 1px $pop1;
+	border-top: solid 1px $pop1;
 	a {
 		width: auto;		
 	}
 	a, p {
-		font-size: 1.4rem;
+		font-size: 2.5rem;
 		font-family: $title;
+		padding: 0px 5px;
+		font-style: italic;
 	}
 
 }
 
+#nav-below {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 50px 20px 60px;
+	p {
+		color: $medium;
+		background: $pop1;
+		padding: 5px;
+		border-radius: 5px;
+	}
+}
+
+
+#comments {
+	color: $dark;
+	a {
+		color: $dark;
+	}
+	h2 {
+		font-size: 2rem;
+	}
+	textarea#comment {
+		border: none;
+		background: $medium;
+		color: $light;
+	}
+	form#commentform {
+		p.form-submit{
+			display: flex;
+		}
+		input[type=submit]{
+			background: $light;
+			border: 1px $medium solid;
+			margin: 20px auto;
+			color: $medium;
+		}
+	}
+}
 
 
 

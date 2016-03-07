@@ -15,7 +15,7 @@ Variables
 $transparent: RGBA(0,0,0,0.7);
 $dark: RGBA(24, 21, 15, 1);
 $medium: RGBA(76, 84, 84, 1);
-$light: RGBA(255, 255, 255, 1);
+$light: RGBA(240, 240, 240, 1);
 $pop1: RGBA(227, 194, 255, 1);
 $pop2: RGBA(253, 250, 0, 1);
 $title: 'Open Sans Condensed', sans-serif;
@@ -51,7 +51,8 @@ img {
 }
 
 body {
-	color: #333;
+	color: $dark;
+	background: $light;
 }
 
 .container {

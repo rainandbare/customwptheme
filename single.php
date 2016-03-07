@@ -1,6 +1,9 @@
 <?php get_header(); ?>
 
 <div class="main">
+<div class="heroPageFull" style="background-image: url(<?php echo hackeryou_get_thumbnail_url($page); ?>);"> 
+  <div class="heroPageFullOverlay"></div>
+          </div>
   <div class="container">
     <div class="posts">
     <div class="content">
@@ -19,7 +22,7 @@
             )); ?>
           </div><!-- .entry-content -->
           <div class="entry-utility">
-                <p><?php the_date(); ?> - <?php echo get_the_category_list( '/' ) ?> - by <?php the_author(); ?>
+                <p><?php the_date(); ?> / <?php echo get_the_category_list( '/' ) ?> /by <?php the_author(); ?>
                 </p>
           </div><!-- .entry-utility -->
         </div><!-- #post-## -->
@@ -34,17 +37,9 @@
       <?php endwhile; // end of the loop. ?>
     </div>
 
-         <div class="entry-meta">
-            <?php hackeryou_posted_on(); ?>
-          </div><!-- .entry-meta -->
-<?php hackeryou_posted_in(); ?>
-            <?php edit_post_link( 'Edit', '<span class="edit-link">', '</span>' ); ?> 
 
 
     </div> <!-- /.content -->
-
-    <?php get_sidebar(); ?>
-
   </div> <!-- /.container -->
 </div> <!-- /.main -->
 

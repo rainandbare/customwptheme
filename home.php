@@ -13,8 +13,11 @@ get_header();  ?>
 </div>
 
   <div class="container">
-	  <div class="posts">
+
+	  <div class="posts">  
+	  <h2 class="blogTitle"><?php echo $pagename ?></h2>
 	    <?php // Start the loop ?>
+
 	    <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 			<div class="wholePost">
 			<a href="<?php echo get_permalink( $post ) ?>">
